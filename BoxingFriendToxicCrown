@@ -78,6 +78,78 @@ end
 })
 
 local Section = Tab:AddSection({
+    Name = "Auto Win Boss 15"
+})
+
+
+Tab:AddButton({
+    Name = "Win Boss 15",
+    Default = false,
+    Callback = function()
+getgenv().AutoKill = true;
+        while wait() do
+if getgenv().AutoKill == true then
+local args = {
+  [1] = "Kill", 
+  [2] = "Level 15"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("NPC"):FireServer(unpack(args))
+wait()
+    end
+end
+end
+})
+
+local Section = Tab:AddSection({
+    Name = "Auto Win Boss 10"
+})
+
+
+Tab:AddButton({
+    Name = "Win Boss 10",
+    Default = false,
+    Callback = function()
+getgenv().AutoKill = true;
+        while wait() do
+if getgenv().AutoKill == true then
+local args = {
+  [1] = "Kill", 
+  [2] = "Level 10"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("NPC"):FireServer(unpack(args))
+wait()
+    end
+end
+end
+})
+
+local Section = Tab:AddSection({
+    Name = "Auto Win Boss 5"
+})
+
+
+Tab:AddButton({
+    Name = "Win Boss 5",
+    Default = false,
+    Callback = function()
+getgenv().AutoKill = true;
+        while wait() do
+if getgenv().AutoKill == true then
+local args = {
+  [1] = "Kill", 
+  [2] = "Level 5"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("NPC"):FireServer(unpack(args))
+wait()
+    end
+end
+end
+})
+
+local Section = Tab:AddSection({
     Name = "Note:"
 })
 local Section = Tab:AddSection({
