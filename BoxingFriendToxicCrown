@@ -1,0 +1,87 @@
+if game.PlaceId == 10857807258 then
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({
+    Name = "Tung Hub | Boxing A Friend Simulator - Toxic Crown Ver",
+    HidePremium = false,
+    SaveConfig = true,
+    ConfigFolder = "OrionTest"
+})
+
+local Tab = Window:MakeTab({
+    Name = "Main 🏠",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+local TabFour = Window:MakeTab({
+    Name = "Misc 🎲",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+    
+    local Section = TabFour:AddSection({
+    Name = "Cre: TungNoPro"
+})
+local Section = TabFour:AddSection({
+    Name = "Discord: tungnopro"
+})
+local Section = TabFour:AddSection({
+    Name = "Helper: BaconBossScript"
+})
+
+local Section = Tab:AddSection({
+    Name = "Auto Hatch"
+
+})
+Tab:AddButton({
+    Name = "Auto Hatch - Easiest Egg for mythic",
+ Default = false,
+    Callback = function()
+getgenv().AutoHatch = true;
+        while wait() do
+if getgenv(). AutoHatch == true then
+local args = {
+    [1] = "Basic",
+    [2] = 1
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEgg:InvokeServer(unpack(args))
+wait()
+    end
+end
+end
+
+})
+
+local Section = Tab:AddSection({
+    Name = "Auto Win Boss 20"
+})
+
+
+Tab:AddButton({
+    Name = "Win Boss 20",
+    Default = false,
+    Callback = function()
+getgenv().AutoKill = true;
+        while wait() do
+if getgenv().AutoKill == true then
+local args = {
+  [1] = "Kill", 
+  [2] = "Level 20"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("NPC"):FireServer(unpack(args))
+wait()
+    end
+end
+end
+})
+
+local Section = Tab:AddSection({
+    Name = "Note:"
+})
+local Section = Tab:AddSection({
+    Name = "CLICK BUTTONS ONLY ONCE - AUTO DELETE AT EGG NOT SCRIPT!"
+})
+
+end
