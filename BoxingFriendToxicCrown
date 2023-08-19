@@ -81,7 +81,10 @@ local Section = Tab:AddSection({
     Name = "Note:"
 })
 local Section = Tab:AddSection({
-    Name = "CLICK BUTTONS ONLY ONCE - AUTO DELETE AT EGG NOT SCRIPT!"
+    Name = "1. CLICK BUTTONS ONLY ONCE"
+})
+local Section = Tab:AddSection({
+    Name = "2. AUTO DELETE AT BASIC EGG MAP 1 WHICH HAS 5 WINS"
 })
 
 end
